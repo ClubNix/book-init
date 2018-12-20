@@ -1,14 +1,15 @@
 # book-init
-Petit tuto déstiné aux nouveaux du Club*Nix; leur expliquant les differents points utiles à savoir sur le club et l'infomratique en général. Il est composé des chapitres suivants :
-  - LaTex;
+Petit tuto déstiné aux nouveaux du Club*Nix, leur expliquant les differents points utiles à savoir sur le club et l'informatique en général. Il est composé des chapitres suivants :
+  - LaTeX;
   - Bash;
-  - Les differents OS Unix;
+  - GNU / Linux;
+  - Les differents OS Linux;
   - F.Droid;
   - Git;
   - LDAP;
   - NFS;
   - Fichiers logs;
-  - Oh My ZSH
-  - Le terminal
-  - Virtuales machines
-  - (Infra ?)
+  - SSH;
+  - Le terminal;
+  - Virtual machine;
+  - Infra du club  -> plus tard;
