@@ -1,0 +1,25 @@
+\usepackage[french]{babel}
+\subsection{Le NFS, ou \textit{Network File Systeme}}
+\subsection{Introduction}
+Un NFS, ou \textit{Network File Systeme}, à traduire par \textit{Système de ficher en réseau}, est un protocole permettant de partager et récuperer des données via un réseau. Les réseaux utilisant un NFS permettent l'utilisation des fichier sauvegardés sur le serveur hébergant le NFS à distance, tant que la connection est établie. En pratique, on peut récuperer ses données sauvegardées sur n'importe quelle machine.
+\subsection{Le NFS du Club*Nix ou de l'ESIEE}
+Le club NIX et l'ESIEE possèdent un NFS, permettant de se connecter à partir de son identifiant LDAP (voir chapitre LDAP), et de récuperer ses données personnelles, quelle que soit la machine utilisée.
+\subsection{Architecture d'un NFS}
+Un NFS suit un modèle d'architecture classique réseau : c'est à dire que chaque clien ( utilisateurs ) se voit accorder un espace de stockage maximal, exactement comme pour un systeme de ficher local. Par la suite,les données sont sauvegardées sur le serveur hébergant le NFS, disposant d'une bien plus grosse capacité de stockage. Chaque demande d'accès ou de sauvegarde de fichier passe par le réseau.
+\subsection{NFS et VFS}
+Sous Linux, un protocole permet de prendre en charge plusieurs systèmes de fichiers différents sur un meme serveur : c'est le VFS. Le systeme VFS determine le stockage auquel une demande est effectuée.
+Lorsqu'une demande s'avere etre désinée au NFS, VFS la transmet au noyeau ( appelé kernel ) du NFS. Le NFS interprete alors la requete d'entrée ou sortie et la traduit en procédure executable par le protocole NFS. On peut notement citer les procédures suivantes :
+\begin{itemize}
+  \item OPEN
+  \item ACCESS
+  \item CREATE
+  \item READ
+  \item CLOSE
+  \item REMOVE
+  \item ...
+\end{itemize}
+Le serveur NFS va alors satisfaire la demande de l'utilisateur en lui "renvoyant" ou "effectunat" sa demande.
+En soit, NFS n'est pas un système de fichier au sens propre mais un protocole réseau permettant d'acceder à des fichiers à distance via un réseau.
+\subsection{La sécurité du NFS}
+Il existe actuellement 4 version de NFS. Dans les 3 premières versions, le protcole NFS n'était pas sécurisé et permettait l'utilsation en local, comme dans une école ou au club nix par exemple. La dernière version ( v.4 ) est doté d'un systeme de chiffrement comprenant la négociation du niveau de sécurité entre client et serveur, une sécurisation simple mais efficace, ainsi qu'un chiffrement des communications.
+La version 4.1 du système est actuellement en cours de développement et n'est pas prévu avant plusieurs années.
