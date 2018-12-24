@@ -1,4 +1,3 @@
-\usepackage[french]{babel}
 \subsection{Le LDAP, ou \textit{Lightweigth Directory Acess Protocol}}
 Lorsqu'un utilisateur tente de se connecter à un ordinateur, le LDAP recois une combinaison login/mot de passe et donne ensuite ou non l'autorisation de se connecter.
 \subsection{Introduction}
