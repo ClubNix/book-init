@@ -1,7 +1,8 @@
-\documentclass[a4paper]{report}
+%\documentclass[a4paper]{report}
+\documentclass[french, a4paper, 12pt, titlepage]{article}
 
 %% Language and font encodings
-\usepackage[french]{babel}
+\usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 
@@ -11,55 +12,72 @@
 %% Useful packages
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage[colorinlistoftodos]{todonotes}
-
-\title{Book Initiation}
-\author{Club*NIX}
+\usepackage{hyperref}
+\hypersetup{%
+	colorlinks=true,       	% false: boxed links; true: colored links
+	linkcolor=black,          	% color of internal links
+	urlcolor=blue,           	% color of external links
+	citecolor=grey
+}
+\usepackage{lmodern}
+%% ajouter fonte petite capitale grasse à lmodern avec celle de computer modern %%
+\rmfamily
+\DeclareFontShape{T1}{lmr}{b}{sc}{<->ssub*cmr/bx/sc}{}
+\DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub*cmr/bx/sc}{}
+\usepackage{url}
+\usepackage[usenames, dvipsnames]{color} % couleurs (nombre de base étendu)
 
 \begin{document}
+
+\title{Book Initiation --- V0}
+\author{Club*NIX}
+
+\date{\url{https://clubnix.fr}}%}
+
 \maketitle
 
 \tableofcontents
+
 \newpage
 
 
-\chapter{Linux}
- \section{GNU-Linux}
+\section{Linux}
+ \subsection{GNU-Linux}
     \input{parties/GNU_Linux.tex}
- \section{different OS}
+ \subsection{different OS}
     \input{parties/diff_OS.tex}
     
-\chapter{Language}
-  \section{LaTeX}
+\section{Language}
+  \subsection{LaTeX}
     \input{parties/latex.tex}
-  \section{Markdown}
+  \subsection{Markdown}
     \input{parties/md.tex}
     
-\chapter{Terminal}
-  \section{Terminal}
+\section{Terminal}
+  \subsection{Terminal}
     \input{parties/terminal.tex}
-  \section{Bash}
+  \subsection{Bash}
     \input{parties/bash.tex}
-  \section{Oh My ZSH}
+  \subsection{Oh My ZSH}
     \input{parties/ZSH.tex}
     
-\chapter{Logiciel libre}
+\section{Logiciel libre}
 	\input{parties/logiciel_libre.tex}
-  \section{Git}
+  \subsection{Git}
     \input{parties/git.tex}
-  \section{F-Droid}
+  \subsection{F-Droid}
     \input{parties/fdroid.tex}
     
-\chapter{Infrastructure réseau}
-  \section{LDAP}
+\section{Infrastructure réseau}
+  \subsection{LDAP}
     \input{parties/ldap.tex}
-  \section{NFS}
-    \input{parties/nf.tex}
-  \section{Fichiers logs}
+  \subsection{NFS}
+    \input{parties/nfs.tex}
+  \subsection{Fichiers logs}
     \input{parties/logs.tex}
-  \section{Virtual Machine}
+  \subsection{Virtual Machine}
     \input{parties/VM.tex}
-  \section{Infra du club}
+  \subsection{Infra du club}
     \input{parties/infra.tex}
 
 \end{document}
