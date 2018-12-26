@@ -1,6 +1,10 @@
 \subsection{Bash et scripts}
+
 Le bash est un interpréteur de script natif aux systèmes d'exploitations sous environnement Unix.
+
+
 \subsubsection{A quoi ca sert ?}
+
 Le bash permet l'execution de scripts, petit morceaux de code, souvent executés au démarage, afin d'effectuer une tâche précise. Par exemple, l'ensemble des applications s'ouvrant au démarrage sont regroupées dans un script. Ceux-ci sont généralement appelés paramètres de la commande. Bash permet l'exécution des commandes shell. Une commande shell est une chaîne de caractères en minuscules qui peut être invoquée au travers d'une invite de commande ou d'un script. Des options et des arguments peuvent la compléter.
 
 Le bash propose differents traitements des commandes :
@@ -17,12 +21,15 @@ Il existe deux modes de fonctionnement du bash :
   \item Le mode batch : bash execute automatiquement un script contenu dans un fichier texte contenant les commandes à utiliser.
 \end{itemiz}
 
+
 \subsubsection{L'interprétation d'une ligne de commande}
+
 Chaque interprétation d'une ligne de commande d'un script repose sur des codes bien stricts :
 \begin{itemiz}
   \item Le premier mot de la ligne est interprété comme le nom de la commande;
   \item Chaque mot est séparé par un ou plusieurs caractère de séparation ( espace, tabulation, tiret, underscore ...);
   \item La fin de la ligne se termine par un ';', comme dans la plupart des languages de programmation, ou un retour à la ligne
 \end{itemiz}
+
 
 Pour plus d'informations sur les lignes de commandes bash, il existe un poly sur les commandes du terminal disponible sur le git du Club*Nix.
