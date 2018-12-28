@@ -29,3 +29,45 @@ Il faut d'abord savoir que les deux logiciels ne se comporte et ne s'utilise pas
 
 \subsubsection{Utilisation}
 
+Le balisage est assez semblable au langage HTML. Il est donc possible de \textbf{créé ou modifier des macro-commandes} afin d'ajouter des raccourci. \textit{Par exemple pour regrouper plusieurs instructions en une.}
+Comme ce langage a été créé avant la Unicode, tout caractères peut s'écrire en ASCII. 
+
+Il y a tout d'abord tout un package a faire pour déterminer la langue d’écriture, les marges, polices d’écriture, couleur et taille de l’écriture style de document, ...
+Tout ces \textbf{peuvent être trouver déjà fait sur Internet}, vous pouvez donc simplement les modifier.
+
+
+Voici les principales instructions qui vous servirons : 
+\begin{itemize}
+\item Partie : \_part{\textit{non_de_la_partie}}
+\item Section : \_section{\textit{non_de_la_partie}}
+\item Sous-section : \_subsection{\texit{non_de_la_partie}}
+\item Paragraphe : \_paragraph{\texit{non_de_la_partie}}
+\end{itemize}
+
+\begin{itemize}
+\item Saut de ligne : \_newline ou \_\_
+\item Liste : commencer par \_begin{itemize} puis pour chaque tiret \_item et conclure par \_end{itemize}
+ \textit{NB : pour modifier les puces il suffit de mettre la puces souhaité entre [] apres \_item
+	pour des liste numéroté il faut écrire \_begin{enumerate} }
+\end{itemize} 
+
+\begin{itemize}
+\item très très petite écriture : \_scriptsize
+\item très petite écriture : \_footnotesize
+\item petite écriture : \_small
+\item grande écriture : \_large
+\item très grande écriture : \_LARGE
+\item très très grande écriture : \_huge
+\end{itemize}
+
+\begin{itemize}
+\item Gras : \_textbf{}
+\item Italique : \_textit{}
+\item Penché : \_textsl{}
+\item Machine à écrire : \_texttt{}
+\item Exposant : \_textsuperscript{}
+\item Encadré : \_fbox{}
+\item Souligné : \_ul{}
+\item Barré : \_st{}
+\end{itemize}
+différentes polices : bch, cmr, lmr, lmss, pag, pbk, phv, ...
