@@ -1,3 +1,16 @@
+\subsubsection{Définition}
 
+SSH signifie "Secure Shell" est un protocole sécurisé pour les communications à distance créé en 1995 par Tatu Ylönen. Pour rappel un Shell va permettre de dialoguer avec une machine ou un serveur (grâce au terminal qui est une application graphique du Shell) via l'exécution de différentes commandes qui retourneront des informations. Il existe toute sorte de Shell mais le plus utilisé reste bash.
+Un shell va donc nous permettre d'administrer nos serveurs Linux, en local, c'est à dire lorsque l'on se trouve physiquement en face de notre serveur, mais aussi à distance ! Notamment grâce à Secure Shell (SSH).
+L'administration à distance est aujourd'hui vitale lorsque l'on gère un seul serveur, comme des milliers qui sont la plupart du temps difficile d'accès car ils sont stocker dans des datacenter et isolé géographiquement.
+Autrefois, d'autres protocoles étaient utilisés pour accéder à distance à un serveur Linux. Le protocole Telnet a pendant longtemps été utilisé, il permet également d'accéder à distance à une machine Linux, mais Telnet est aujourd'hui délaissé au profit de SSH et cela pour une raison très simple : son manque de sécurité. SSH va créer un tunnel entre l'utilisateur et la machine (il va crypter les données).
 
+Comme dit précédemment nous utilisons SSH surtout pour faire le liens entre nos serveurs et nous.
 
+\subsubsection{Les Commandes De Bases}
+\begin{itemize}
+	\item Toutes les commandes du terminal sont appliquable
+	\item Connexion à la machine distante avec le login john 'ssh john@remotehost.example.com' ou 'ssh -l john remotehost.example.com'
+	\item Copie de la clé publique sur la machine distante 'ssh-copy-id -i ~/.ssh/id_dsa.pub john@remotehost.example.com'
+	\item la commande \href{scp} va permettre de copier des fichiers entre le serveur et le client ssh de manière sécurisé \href{scp my_file john@remotehost.example.com:/home/john/a_folder} pour un seul fichier et \href{scp -r my_folder john@remotehost.example.com:/home/john/another_folder} pour un dossier (ajout de l’argument de récursivité). Il est indispensable de préciser le dossier de destination (après les ':').
+\end{itemize}
