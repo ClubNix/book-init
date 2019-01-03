@@ -14,7 +14,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \hypersetup{%
-	colorlinks=true,       	% false: boxed links; true: colored links
+	colorlinks=firetrue,       	% false: boxed links; true: colored links
 	linkcolor=black,          	% color of internal links
 	urlcolor=blue,           	% color of external links
 	citecolor=grey
@@ -26,6 +26,32 @@
 \DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub*cmr/bx/sc}{}
 \usepackage{url}
 \usepackage[usenames, dvipsnames]{color} % couleurs (nombre de base étendu)
+\usepackage{listings}% insérer code source
+\lstloadlanguages{sh,bash,awk,make}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{multicol}
+\definecolor{grey}{rgb}{0.96,0.96,0.96}
+\definecolor{grey2}{rgb}{0.3,0.3,0.3}
+
+%% Define listings params %%
+\lstset{%
+%	numbers=left,
+	language=bash,
+	tabsize=4,
+	frame=single, % cadre autour du code
+	breaklines=true, % autorise couper ligne trop longue
+	basicstyle=\small\ttfamily,
+	numberstyle=\scriptsize\ttfamily,
+	backgroundcolor=\color{grey},
+	showstringspaces=false,
+	keywordstyle=\color{OliveGreen},
+	stringstyle=\color{BrickRed},
+	commentstyle=\color{grey2}\it,
+	stepnumber=1 % numérote toute les x lignes
+}
 
 \begin{document}
 
@@ -39,7 +65,6 @@
 \tableofcontents
 
 \newpage
-
 
 \section{Linux}
  \subsection{GNU-Linux}
