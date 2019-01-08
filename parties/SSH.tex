@@ -11,6 +11,6 @@ Comme dit précédemment nous utilisons SSH surtout pour faire le liens entre no
 \begin{itemize}
 	\item Toutes les commandes du terminal sont appliquable
 	\item Connexion à la machine distante avec le login john 'ssh john@remotehost.example.com' ou 'ssh -l john remotehost.example.com'
-	\item Copie de la clé publique sur la machine distante 'ssh-copy-id -i ~/.ssh/id_dsa.pub john@remotehost.example.com'
-	\item la commande \href{scp} va permettre de copier des fichiers entre le serveur et le client ssh de manière sécurisé \href{scp my_file john@remotehost.example.com:/home/john/a_folder} pour un seul fichier et \href{scp -r my_folder john@remotehost.example.com:/home/john/another_folder} pour un dossier (ajout de l’argument de récursivité). Il est indispensable de préciser le dossier de destination (après les ':').
+	\item Copie de la clé publique sur la machine distante 'ssh-copy-id -i \~/.ssh/id\_dsa.pub john@remotehost.example.com'
+	\item la commande \href{scp} va permettre de copier des fichiers entre le serveur et le client ssh de manière sécurisé \href{scp my\_file john@remotehost.example.com:/home/john/a\_folder} pour un seul fichier et \href{scp -r my\_folder john@remotehost.example.com:/home/john/another\_folder} pour un dossier (ajout de l’argument de récursivité). Il est indispensable de préciser le dossier de destination (après les ':').
 \end{itemize}
