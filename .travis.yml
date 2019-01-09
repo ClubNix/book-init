@@ -11,7 +11,7 @@ tex-config:
 - build-pattern=main.tex
 - latexmk-flags=-pdf
 # Check at https://www.ctan.org/pkg/package-name in which TeX Live package a LaTeX package is contained.
-- packages=babel, inputenc, fontenc, geometry, amsmath, graphicx, hyperref, lmodern, url, color, xcolor, listings, amsmath, amsfonts, amssymb, amsthm, multicol
+- packages=babel, babel-french, inputenc, fontenc, geometry, amsmath, graphicx, hyperref, lm, url, color, xcolor, listings, amsmath, amsfonts, amssymb, amsthm, multicol
 
 # We will use the docker image from https://hub.docker.com/r/strauman/travis-latexbuild/
 script:
