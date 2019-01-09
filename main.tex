@@ -11,7 +11,6 @@
 %% Useful packages
         \usepackage{amsmath}
         \usepackage{lmodern}
-        \usepackage{xcolor}
         \usepackage[pdftex]{graphicx}
 
 
@@ -25,7 +24,7 @@
 %% Hyperlink package
         \usepackage{hyperref}
         \hypersetup{%
-        	colorlinks=firetrue,       	% false: boxed links; true: colored links
+        	colorlinks=false,       	% false: boxed links; true: colored links
 	        linkcolor=black,          	% color of internal links
         	urlcolor=blue,           	% color of external links
         	citecolor=grey
@@ -37,8 +36,7 @@
 \DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub*cmr/bx/sc}{}
 \usepackage{url}
 \usepackage[usenames, dvipsnames]{color} % couleurs (nombre de base étendu)
-\usepackage{listings}% insérer code source
-\lstloadlanguages{sh,bash,awk,make}
+
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -48,6 +46,8 @@
 \definecolor{grey2}{rgb}{0.3,0.3,0.3}
 
 %% Define listings params %%
+\usepackage{listings}% insérer code source
+\lstloadlanguages{sh,bash,awk,make}
 \lstset{%
 %	numbers=left,
 	language=bash,
