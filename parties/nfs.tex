@@ -1,18 +1,28 @@
 \subsubsection{Introduction}
 
-Un NFS, ou \textit{Network File Systeme}, à traduire par \textit{Système de ficher en réseau}, est un protocole permettant de partager et récuperer des données via un réseau. Les réseaux utilisant un NFS permettent l'utilisation des fichier sauvegardés sur le serveur hébergant le NFS à distance, tant que la connection est établie. En pratique, on peut récuperer ses données sauvegardées sur n'importe quelle machine.
+Un NFS, ou \textit{Network File Systeme}, à traduire par \textit{Système de fichier en réseau}, est un protocole permettant
+de partager et récupérer des données via un réseau. Les réseaux utilisant un NFS permettent l'utilisation des fichiers sauvegardés
+ sur le serveur hébergeant le NFS à distance, tant que la connexion est établie. En pratique, on peut récupérer
+ ses données sauvegardées sur n'importe quelle machine.
 
 
 \subsubsection{Le NFS du Club*Nix ou de l'ESIEE}
 
-Le club NIX et l'ESIEE possèdent un NFS, permettant de se connecter à partir de son identifiant LDAP (voir chapitre LDAP), et de récuperer ses données personnelles, quelle que soit la machine utilisée.
+Le club NIX et l'ESIEE possèdent un NFS, permettant de se connecter à partir de son identifiant LDAP (voir chapitre LDAP),
+ et de récupérer ses données personnelles, quelle que soit la machine utilisée.
 \subsubsection{Architecture d'un NFS}
-Un NFS suit un modèle d'architecture classique réseau : c'est à dire que chaque clien ( utilisateurs ) se voit accorder un espace de stockage maximal, exactement comme pour un systeme de ficher local. Par la suite,les données sont sauvegardées sur le serveur hébergant le NFS, disposant d'une bien plus grosse capacité de stockage. Chaque demande d'accès ou de sauvegarde de fichier passe par le réseau.
+Un NFS suit un modèle d'architecture classique réseau : c'est à dire que chaque client (utilisateurs) se voit accordé
+ un espace de stockage maximal, exactement comme pour un système de ficher local. Par la suite, les données sont sauvegardées
+ sur le serveur hébergeant le NFS, disposant d'une bien plus grosse capacité de stockage. Chaque demande d'accès
+  ou de sauvegarde de fichier passe par le réseau.
 
 
 \subsubsection{NFS et VFS}
-Sous Linux, un protocole permet de prendre en charge plusieurs systèmes de fichiers différents sur un meme serveur : c'est le VFS. Le systeme VFS determine le stockage auquel une demande est effectuée.
-Lorsqu'une demande s'avere etre désinée au NFS, VFS la transmet au noyeau ( appelé kernel ) du NFS. Le NFS interprete alors la requete d'entrée ou sortie et la traduit en procédure executable par le protocole NFS. On peut notement citer les procédures suivantes :
+Sous Linux, un protocole permet de prendre en charge plusieurs systèmes de fichiers différents sur un même serveur :
+c'est le VFS. Le système VFS détermine le stockage auquel une demande est effectuée.
+Lorsqu'une demande s'avère être destinée au NFS, VFS la transmet au noyau (appelé kernel) du NFS. Le NFS interprète
+alors la requête d'entrée ou sortie et la traduit en procédure exécutable par le protocole NFS.
+On peut notamment citer les procédures suivantes :
 \begin{itemize}
   \item OPEN
   \item ACCESS
@@ -22,11 +32,15 @@ Lorsqu'une demande s'avere etre désinée au NFS, VFS la transmet au noyeau ( ap
   \item REMOVE
   \item ...
 \end{itemize}
-Le serveur NFS va alors satisfaire la demande de l'utilisateur en lui "renvoyant" ou "effectunat" sa demande.
-En soit, NFS n'est pas un système de fichier au sens propre mais un protocole réseau permettant d'acceder à des fichiers à distance via un réseau.
+Le serveur NFS va alors satisfaire la demande de l'utilisateur en lui "renvoyant" ou "effectuant" sa demande.
+En soi, NFS n'est pas un système de fichier au sens propre mais un protocole réseau permettant d'accéder à des fichiers
+à distance via un réseau.
 
 
 \subsubsection{La sécurité du NFS}
 
-Il existe actuellement 4 version de NFS. Dans les 3 premières versions, le protcole NFS n'était pas sécurisé et permettait l'utilsation en local, comme dans une école ou au club nix par exemple. La dernière version ( v.4 ) est doté d'un systeme de chiffrement comprenant la négociation du niveau de sécurité entre client et serveur, une sécurisation simple mais efficace, ainsi qu'un chiffrement des communications.
-La version 4.1 du système est actuellement en cours de développement et n'est pas prévu avant plusieurs années.
+Il existe actuellement 4 versions de NFS. Dans les 3 premières versions, le protocole NFS n'était pas sécurisé et permettait
+l'utilisation en local, comme dans une école ou au Club Nix par exemple. La dernière version (v.4)
+ est doté d'un système de chiffrement comprenant la négociation du niveau de sécurité entre client et serveur,
+  une sécurisation simple mais efficace, ainsi qu'un chiffrement des communications.
+La version 4.1 du système est actuellement en cours de développement et n'est pas prévue avant plusieurs années.

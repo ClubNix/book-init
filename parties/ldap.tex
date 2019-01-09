@@ -1,29 +1,39 @@
 \subsubsection{Le LDAP, ou \textit{Lightweigth Directory Acess Protocol}}
 
-Lorsqu'un utilisateur tente de se connecter à un ordinateur, le LDAP recois une combinaison login/mot de passe et donne ensuite ou non l'autorisation de se connecter.
+Lorsqu'un utilisateur tente de se connecter à un ordinateur, le LDAP reçoit une combinaison login/mot de passe et donne
+ensuite ou non l'autorisation de se connecter.
 
 
 \subsubsection{Introduction}
 
-Le LDAP est un protocole crée en 1995, succedant au protocol DAP et permettant l'accès et la modification de base de donnée sur les utilisateurs d'un reseau. Un LDAP sert notement à se connecter ou se déconnecter d'un serveur hébergant le LDAP afin d'y être identifié, mais aussi à chercher des informations, les comparer, ajouter des utilisateurs...
+Le LDAP est un protocole créé en 1995, succédant au protocole DAP et permettant l'accès et la modification de base de données
+ sur les utilisateurs d'un reseau. Un LDAP sert notement à se connecter ou se déconnecter d'un serveur hébergant le LDAP afin
+  d'y être identifié, mais aussi à chercher des informations, les comparer, ajouter des utilisateurs...
 \subsection{Le LDAP du club Nix ou de l'école}
-Le LDAP du club NIX ou de l'école permet de se connecter et de s'identifier afin de récuperer ses informations, quelque soit la machine utilisée.
+Le LDAP du club NIX ou de l'école permet de se connecter et de s'identifier afin de récupérer ses informations, quelle que soit
+ la machine utilisée.
 
 
 \subsubsection{Les entrées}
 
-Un LDAP définit l'accès aux entrées (ou utilisateurs la plus part du temps).
-Le LDAP ne peut gérer que des entrées. Une entrée peut etre un nom d'utilisateur, un périférique ou encore des parametres. Il existe 2 types d'entrées, les entrées normales et les entrées opérationnelles :
+Un LDAP définit l'accès aux entrées (ou utilisateurs la plupart du temps).
+Le LDAP ne peut gérer que des entrées. Une entrée peut être un nom d'utilisateur, un périphérique ou encore des paramètres.
+ Il existe 2 types d'entrées, les entrées normales et les entrées opérationnelles :
 \begin{itemize}
-    \item Les entrées classiques, telles le nom d'utilisateur ou la date d'aniveraires sont des entrées dites classiques.
-    \item Les entrées opérationnelles, tels les parametres, les dates de modification, qui ne sont accessibles et utilisables uniquement par le serveur.
+    \item Les entrées classiques, telles que le nom d'utilisateur ou la date d'anniversaire sont des entrées dites classiques.
+    \item Les entrées opérationnelles, tels que les paramètres, les dates de modification, qui ne sont accessibles et utilisables
+    uniquement par le serveur.
 \end{itemize}
-Une entrée est définie par son nom, ou DN pour \textit{Distinguished Name}, composé d'une serie de clé et de valeur de ces clé. Par exemple, la clé \textit{uid} définit le nom d'utilisateur et la clé \textit{cn} définit le nom. Pour ces deux clé, une entrée serait sous la forme : \textit{uid=utilisateur,cn=nix}
+Une entrée est définie par son nom, ou DN pour \textit{Distinguished Name}, composé d'une série de clés et de valeurs de ces clés.
+Par exemple, la clé \textit{uid} définit le nom d'utilisateur et la clé \textit{cn} définit le nom. Pour ces deux clés,
+ une entrée serait sous la forme : \textit{uid=utilisateur,cn=nix}
 
 
 \subsubsection{L'arborescence}
 
-Un serveur hébergant un LDAP est organisé selon une arborescence, comme un systeme de ficher, dans lequel chaque branche correspond à une entrée. Une branche situé à la racine sera appelé racine ou root en anglais. Le scheme d'une clé correspond a l'ensemble des valeurs des attributs ou valeurs attribué aux clés.
+Un serveur hébergeant un LDAP est organisé selon une arborescence, comme un système de fichiers, dans lequel chaque branche
+correspond à une entrée. Une branche située à la racine sera appelée racine ou root en anglais.
+Le schéma d'une clé correspond à l'ensemble des valeurs des attributs ou valeurs attribuées aux clés.
 Les annuaires LDAP répondent à certaines règles de structure :
 \begin{itemize}
     \item Un annuaire est un arbre d'entrées;
@@ -35,7 +45,9 @@ Les annuaires LDAP répondent à certaines règles de structure :
 
 \subsubsection{Chercher des informations d'un LDAP}
 
-Le protocole LDAP fournit un ensemble de fonction permettant d'interroger le serveur sur lequel est herbergé le serveur LDAP afin de modifer, ajouter ou supprimer des entrées. On peut citer notement *add* pour ajouter une entrée, *delete* pour la supprimer, ou *rename* pour la renomer, afin de modifier l'arborescence du LDAP.
+Le protocole LDAP fournit un ensemble de fonctions permettant d'interroger le serveur sur lequel est hébergé
+le serveur LDAP afin de modifier, ajouter ou supprimer des entrées. On peut citer notamment *add* pour ajouter une entrée,
+ *delete* pour la supprimer, ou *rename* pour la renommer, afin de modifier l'arborescence du LDAP.
 \subsubsection{Les principales commandes du LDAP}
 Voici une lise des principales clés d'un LDAP :
 \begin{itemize}
@@ -50,7 +62,7 @@ Voici une lise des principales clés d'un LDAP :
 
 Voici une liste des principales commandes d'un LDAP :
 \begin{itemize}
-    \item \textit{abandon} : Abandonne l'opération précédemment envoyées au serveur;
+    \item \textit{abandon} : Abandonne l'opération précédemment envoyée au serveur;
     \item \textit{add} : Ajoute une entrée au répertoire;
     \item \textit{bind} : Initie une nouvelle session sur le serveur LDAP;
     \item \textit{compare} : Compare les entrées d'un répertoire selon des critères;
