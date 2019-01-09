@@ -1,24 +1,35 @@
-%\documentclass[a4paper]{report}
-\documentclass[french, a4paper, 12pt, titlepage]{article}
+\documentclass[12pt, titlepage]{article}
 
 %% Language and font encodings
-\usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage[T1]{fontenc}
+        \usepackage[utf8]{inputenc}
+        \usepackage[T1]{fontenc}
+        \usepackage[french]{babel}
 
 %% Sets page size and margins
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
 %% Useful packages
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\hypersetup{%
-	colorlinks=firetrue,       	% false: boxed links; true: colored links
-	linkcolor=black,          	% color of internal links
-	urlcolor=blue,           	% color of external links
-	citecolor=grey
-}
+        \usepackage{amsmath}
+        \usepackage{lmodern}
+        \usepackage{xcolor}
+        \usepackage[pdftex]{graphicx}
+
+
+%% Bullet in lists
+        \makeatletter
+        \AtBeginDocument{
+          \def\labelitemi{$\bullet$}
+        }
+        \makeatother
+
+%% Hyperlink package
+        \usepackage{hyperref}
+        \hypersetup{%
+        	colorlinks=firetrue,       	% false: boxed links; true: colored links
+	        linkcolor=black,          	% color of internal links
+        	urlcolor=blue,           	% color of external links
+        	citecolor=grey
+        }
 \usepackage{lmodern}
 %% ajouter fonte petite capitale grasse à lmodern avec celle de computer modern %%
 \rmfamily
