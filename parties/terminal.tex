@@ -1,16 +1,20 @@
 \subsubsection{Quoi et pourquoi ?}
-Le terminal est un programme lançant une console permettant d'exécuter des commandes.
- Les commandes permettent en une ligne de texte d'effectuer des opérations qui peuvent
- s'avérer très longues avec l'interface graphique. Par exemple, modifier les droits d'accès ou d'écriture à un programme
- s'effectue en une dizaine de clics avec l'interface graphique, alors que la commande *chmod* avec les droits voulus et
- le nom du fichier le fait instantanément.
+Le terminal est un programme lançant une console permettant d'exécuter des
+commandes.
+
+Les commandes permettent en une ligne de texte d'effectuer des
+opérations qui peuvent s'avérer très longues avec l'interface graphique. Par
+exemple, modifier les droits d'accès ou d'écriture à un fichier s'effectue en
+une dizaine de clics avec l'interface graphique, alors que la commande *chmod*
+avec les droits voulus et le nom du fichier le fait instantanément.
 
 \subsubsection{Ouvrir une console et s'en servir}
 Pour ouvrir une console de terminal, on peut :
 
 \begin{itemize}
 \item chercher terminal dans la barre de recherche;
-\item avec le raccourci clavier disponible sur la plupart des environnements de bureau avec Ctrl + Alt + T.
+\item avec le raccourci clavier disponible sur la plupart des environnements de
+bureau avec Ctrl + Alt + T.
 \end{itemize}
 
 Une première ligne apparaît, et est comme ceci :
@@ -19,24 +23,34 @@ Une première ligne apparaît, et est comme ceci :
 \item \textit{nom d'utilisateur"@"nom du pc":\~\$}
 \end{itemize}
 
-Tapez alors votre ligne de commande puis \textit{Enter} pour l'exécuter
+Tapez alors votre ligne de commande puis \textit{Enter} pour l'exécuter.\newline
+
 Il existe de nombreux outils dans le terminal, que nous allons voir ici :
 \paragraph{Arrêter une commande}
 
-Il est possible de lancer une commande puis de l'arrêter manuellement sans attendre qu'elle se termine.
- Par exemple, vous avez lancé une commande ping pour tester votre réseau. La commande ping ne s'arrête que si on lui dit.
-  On peut alors taper la commande suivante \textit{Ctrl + C} pour l'arrêter. Attention cependant.
-   Même si sur la commande ping l'arrêt de la commande n'a pas d'impact, ce n'est pas le cas pour toutes les commandes.
+Il est possible de lancer une commande puis de l'arrêter manuellement sans
+attendre qu'elle se termine.
 
-\paragraph{copier-coller}
+Par exemple, vous avez lancé une commande ping pour tester votre réseau. La
+commande ping ne s'arrête que si on lui demande. On peut alors taper la commande
+à travers le raccourci clavier suivant : \textit{Ctrl + C} pour l'arrêter.
+Attention cependant. Même si sur la commande ping l'arrêt de la commande n'a pas
+d'impact, ce n'est pas le cas pour toutes les commandes. \textbf{Ctrl + C est
+une façon relativement moche d'arrêter un programme.}
 
-Copier-coller une ligne de commande depuis un forum est possible, mais pas avec les raccourcis claviers classiques.
- En effet, Ctrl + C est déjà une commande du terminal. Il faut donc faire \textit{Ctrl + Shift + C}
- pour copier une ligne et \textit{Ctrl + Shift + V} pour coller. Vous pouvez aussi, pour les ordinateurs en disposant,
-  sélectionner la ligne "en bleu" et cliquer sur la molette de la souris afin de coller la ligne dans le terminal,
-  ou en utilisant le bouton central au dessus du pavé tactile.
-Il faut faire attention toutefois avec le copier coller depuis les forums. En effet, si vous copiez collez une suite de
- commandes avec des retours à la ligne comme par exemple :
+\paragraph{Copier-coller}
+
+Copier-coller une ligne de commande depuis un terminal est possible, mais pas
+avec les raccourcis claviers classiques.
+En effet, Ctrl + C est déjà un raccourci clavier du terminal. Il faut donc faire
+\textit{Ctrl + Shift + C} pour copier une ligne et \textit{Ctrl + Shift + V}
+pour coller. Vous pouvez aussi, pour les ordinateurs en disposant, sélectionner
+la ligne "en bleu" et cliquer sur le clic du milieu (ou la molette de la souris)
+afin de coller la ligne dans le terminal.
+
+Il faut faire attention toutefois avec le copier coller depuis les forums. En
+effet, si vous copiez collez une suite de commandes avec des retours à la ligne
+comme par exemple :
 
 \begin{itemize}
 \item \textit{ls}
@@ -44,47 +58,73 @@ Il faut faire attention toutefois avec le copier coller depuis les forums. En ef
 \item \textit{cat fichier}
 \end{itemize}
 
-Le terminal exécutera les deux premières commandes car elles sont séparées par un retour à la ligne. Cela peut être très pratique mais aussi dangereux.
+Le terminal exécutera les deux premières commandes car elles sont séparées par
+un retour à la ligne. Cela peut être très pratique mais aussi dangereux.
+
+
 \subsubsection{L'auto-complétion}
-Certaines lignes peuvent être longues à taper. Le terminal met à disposition une touche permettant de compléter seul la fin de
-la commande. C'est la touche Tab. Après avoir tapé 3 lettres, vous pouvez demander l'auto-complétion.
-C'est le cas par exemple pour un nom de fichier très long ou de paquets. Il suffit alors de taper "cd début + Tab " et
-le terminal finira à votre place. Lorsque plusieurs fichiers ont le même début de nom, le terminal vous les proposera alors
-en dessous de votre ligne de commande.
 
-\paragraph{}
-\textbf{Le manuel}
-La plupart des commandes disposent d'un manuel, qui renseigne sur les paramètres de la commande, son utilité,
-ou encore comment l'utiliser. Pour ouvrir le manuel d'une commande, on tape dans le terminal \textit{man + 'nom de la commande'}.
+Certaines lignes peuvent être longues à taper. Le terminal met à disposition une
+touche permettant de compléter seul la fin de la commande. C'est la touche Tab.
+Après avoir tapé 3 lettres, vous pouvez demander l'auto-complétion.
+C'est le cas par exemple pour un nom de fichier très long ou de paquets. Il
+suffit alors de taper "cd début + Tab " et le terminal finira à votre place.
+Lorsque plusieurs fichiers ont le même début de nom, le terminal vous les
+proposera alors en dessous de votre ligne de commande.
 
-\paragraph{}
-\textbf{Retrouver une commande déjà tapée précédemment}
-Pour retrouver une commande déjà tapée, on peut cliquer sur la flèche du haut. Un clic remonte d'une commande.
- De ce fait, si vous souhaitez taper une commande très longue et que vous avez déjà tapée il y a quelques temps,
- cliquez sur la flèche du haut autant de fois que nécessaire pour la retrouver.
-Il existe aussi une commande, plus lourde, \textit{history} qui affiche les 500 dernières commandes tapées.
+\paragraph{Le manuel}
+La plupart des commandes disposent d'un manuel, qui renseigne sur les paramètres
+de la commande, son utilité, ou encore comment l'utiliser. Pour ouvrir le manuel
+d'une commande, on tape dans le terminal \textit{man + 'nom de la commande'}.
+
+\paragraph{Retrouver une commande déjà tapée précédemment}
+Pour retrouver une commande déjà tapée, on peut cliquer sur la flèche du haut.
+Un clic remonte d'une commande.
+
+De ce fait, si vous souhaitez taper une commande très longue et que vous avez
+déjà tapée il y a quelques temps, cliquez sur la flèche du haut autant de fois
+que nécessaire pour la retrouver.
+
+Il existe aussi une commande, plus lourde, \textit{history} qui affiche les 500
+dernières commandes tapées. Elle est lourde, mais très pratique couplée avec
+ \textit{grep}.
 
 \subsubsection{Les droits SUDO}
-Pour exécuter certaines commandes, notamment installer des paquets ou reboot la machine, le terminal a besoin de certains droits,
- un mot de passe.  C'est les droits SUDO, pour Super Utilisateur DO.
-Les droits sudo concernent les commandes administrateurs systèmes. Quiconque qui détiendrait les droits sudo pourrait passer des
-commandes de bas niveau capables de modifier gravement la configuration même, donc influer sur le comportement de la machine.
-En accordant les droits sudo à une commande, elle est alors capable d'installer un programme
-( \textit{sudo apt install nom\_ du\_ programme}), modifier un fichier de configuration ...
-Pour lancer une commande administrateur système, il faut taper \textit{sudo + nom\_ de\_ la\_ commande}.
-Le terminal va alors vous demander votre mot de passe administrateur avant de lancer la commande.
-Si le mot de passe ne s'affiche pas, ni même des astérisques ou autre, c'est normal, c'est pour renforcer la sécurité
-car personne ne saura ne serait-ce que la taille de ce mot de passe. Attention, vous êtes le seul responsable de votre machine
-et lancer des commandes sudo pourraient complètement détruire votre machine.
+
+Pour exécuter certaines commandes, notamment installer des paquets ou redémarrer
+la machine, le terminal a besoin des droirts super-utilisateur. Ce sont les
+droits SUDO, pour Super Utilisateur DO.
+Les droits sudo concernent les commandes administrateurs systèmes. Quiconque
+détiendrait les droits sudo pourrait passer des commandes de bas niveau capables
+de modifier gravement la configuration même, donc influer sur le comportement de
+la machine.
+
+En accordant les droits sudo à une commande, elle est alors capable de tout.
+Par exemple d'installer un programme : \textit{sudo apt install nom\_ du\_
+programme}, modifier un fichier de configuration ...
+
+Pour lancer une commande administrateur système, il faut taper \textit{sudo +
+nom\_ de\_ la\_ commande}.
+Le terminal va alors vous demander votre mot de passe administrateur avant de
+lancer la commande.
+Si le mot de passe ne s'affiche pas, ni même des astérisques ou autre, c'est
+normal, c'est pour renforcer la sécurité car personne ne saura ne serait-ce que
+la taille de ce mot de passe. Attention, vous êtes le seul responsable de
+votre machine et lancer des commandes sudo sans être sûr de leur impact
+pourraient complètement détruire votre machine.
 
 \subsubsection{Les questions des commandes}
-Certaines commandes vous posent des questions, comme par exemple lors de l'installation d'un paquet
-ces questions sont de la forme :
+
+Certaines commandes vous posent des questions, comme par exemple lors de
+l'installation d'un paquet ces questions sont de la forme :
 
 \begin{itemize}
-\item 'question' [Y/N]. Il faut alors taper Y (pour yes) ou N (pour no) puis entrer afin de répondre à la question.
-\item 'question' [Y/n]" ou "'question' [y/N]" C'est une variante dans laquelle vous pouvez toujours taper y ou n
+\item 'question' [Y/N]. Il faut alors taper Y (pour yes) ou N (pour no) puis
+entrer afin de répondre à la question.
+\item 'question' [Y/n]" ou "'question' [y/N]" C'est une variante dans laquelle
+vous pouvez toujours taper y ou n
 mais aussi directement entrée. La réponse prise en compte sera celle en majuscule.
 \end{itemize}
 
-\textit{il existe un poly regroupant les principales commandes terminal disponibles sur le git du club}
+\textit{Il existe un poly regroupant les principales commandes terminal
+disponibles sur le GitHub du club.}

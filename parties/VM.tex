@@ -16,10 +16,13 @@ Il existe deux types d'hyperviseurs: le type 1 et le type 2
 
 \paragraph{Définition d'une machine virtuelle}
 
-Une machine virtuelle est un fichier informatique, généralement appelé image, qui se comporte comme un ordinateur réel.
+Une machine virtuelle est un fichier informatique, généralement appelé image, qui se comporte comme un ordinateur réel.\newline
+
 En d’autres termes, il s’agit d’un ordinateur créé à l’intérieur d’un ordinateur. Elle s’exécute dans une fenêtre,
  comme tout autre programme, en offrant à l’utilisateur final une expérience identique à celle qu’il aurait sur le
- système d’exploitation hôte. La machine virtuelle est placée dans un « bac à sable » qui l’isole du reste du système,
+ système d’exploitation hôte.
+
+ La machine virtuelle est placée dans un « bac à sable » qui l’isole du reste du système,
  de sorte que les logiciels installés sur la machine virtuelle ne peuvent ni s’échapper, ni modifier l’ordinateur hôte.
  Cela produit un environnement idéal pour tester d’autres systèmes d’exploitation, dont des versions bêta,
  l’accès à des données infectées par des virus, la création de sauvegardes de système d’exploitation et l’exécution
@@ -28,7 +31,9 @@ Il est possible d’exécuter plusieurs machines virtuelles simultanément sur u
 Pour les serveurs, les divers systèmes d’exploitation fonctionnent côte à côte, avec un composant logiciel appelé hyperviseur
 (logicielle de virtualisation) pour les gérer, alors que les ordinateurs de bureau classiques n’utilisent qu’un seul
 système d’exploitation pour exécuter d’autres systèmes d’exploitation dans des fenêtres de programme qui leur sont propres.
- Chaque machine virtuelle fournit son propre matériel virtuel, à savoir les processeurs, la mémoire, les disques durs,
+
+
+ Chaque machine virtuelle demande son propre matériel virtuel, à savoir les processeurs, la mémoire, les disques durs,
   les interfaces réseau et les autres périphériques nécessaires. Le matériel virtuel est ensuite mappé au matériel réel
    sur la machine physique, ce qui permet de réaliser des économies en réduisant le besoin de disposer de systèmes matériels physiques,
     ainsi que les coûts de maintenance associés, tout en réduisant la demande en alimentation et refroidissement.

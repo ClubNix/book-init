@@ -10,7 +10,7 @@ Le LDAP est un protocole créé en 1995, succédant au protocole DAP et permetta
  sur les utilisateurs d'un reseau. Un LDAP sert notement à se connecter ou se déconnecter d'un serveur hébergant le LDAP afin
   d'y être identifié, mais aussi à chercher des informations, les comparer, ajouter des utilisateurs...
 \subsection{Le LDAP du club Nix ou de l'école}
-Le LDAP du club NIX ou de l'école permet de se connecter et de s'identifier afin de récupérer ses informations, quelle que soit
+Le LDAP du Club*Nix ou de l'école permet de se connecter et de s'identifier afin de récupérer ses informations, quelle que soit
  la machine utilisée.
 
 
@@ -45,30 +45,11 @@ Les annuaires LDAP répondent à certaines règles de structure :
 
 \subsubsection{Chercher des informations d'un LDAP}
 
-Le protocole LDAP fournit un ensemble de fonctions permettant d'interroger le serveur sur lequel est hébergé
-le serveur LDAP afin de modifier, ajouter ou supprimer des entrées. On peut citer notamment *add* pour ajouter une entrée,
- *delete* pour la supprimer, ou *rename* pour la renommer, afin de modifier l'arborescence du LDAP.
-\subsubsection{Les principales commandes du LDAP}
-Voici une lise des principales clés d'un LDAP :
-\begin{itemize}
-    \item \textit{userid} (userid), il s'agit d'un identifiant unique obligatoire;
-    \item \textit{cn} (common name), il s'agit du nom de la personne;
-    \item \textit{givenname}, il s'agit du prénom de la personne;
-    \item \textit{sn} (surname), il s'agit du surnom de la personne;
-    \item \textit{o} (organization), il s'agit de l'entreprise de la personne;
-    \item \textit{u} (organizational unit), il s'agit du service de l'entreprise dans laquelle la personne travaille.
-    \item \textit{mail}, il s'agit de l'adresse de courrier électronique de la personne
-\end{itemize}
+Le protocole LDAP fournit un ensemble de fonctions permettant d'interroger le
+serveur sur lequel est hébergé le serveur LDAP afin de modifier, ajouter ou
+supprimer des entrées. On peut citer notamment *add* pour ajouter une entrée,
+ *delete* pour la supprimer, ou *rename* pour la renommer, afin de modifier
+ l'arborescence du LDAP.
 
-Voici une liste des principales commandes d'un LDAP :
-\begin{itemize}
-    \item \textit{abandon} : Abandonne l'opération précédemment envoyée au serveur;
-    \item \textit{add} : Ajoute une entrée au répertoire;
-    \item \textit{bind} : Initie une nouvelle session sur le serveur LDAP;
-    \item \textit{compare} : Compare les entrées d'un répertoire selon des critères;
-    \item \textit{delete} : Supprime une entrée d'un répertoire;
-    \item \textit{extended} : Effectue des opérations étendues;
-    \item \textit{rename} : Modifie le nom d'une entrée;
-    \item \textit{search} : Recherche des entrées d'un répertoire;
-    \item \textit{unbind} : Termine une session sur le serveur LDAP.
-\end{itemize}
+On utilise essentiellement les LDAP grâce à des interfaces graphiques ou à
+d'autres logiciels qui utilisent un LDAP.

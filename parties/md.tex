@@ -1,15 +1,24 @@
 \subsubsection{Histoire}
 
-Le markdown est un \textbf{langage de balisage} crée en 2004. Il est facile à manipuler, donc simple à écrire et a lire sans connaître
- les balises.
-Le markdown peut être écrit sur n'importe quel éditeur de texte, il suffit lorsque le document est prêt a être enregistré
- de nommer le document puis d'inscrire "\textbf{.md}".
+Le Markdown est un \textbf{langage de balisage} crée en 2004. Il est facile à
+manipuler, donc simple à écrire et à lire sans connaître les balises.
+Le Markdown peut être écrit sur n'importe quel éditeur de texte, il suffit,
+lorsque le document est prêt a être enregistré de nommer le document avec
+l'extension : "\textbf{.md}".
 
 
 \subsubsection{Instructions}
 
 Les instructions sont \textbf{très simples et peuvent être combinées}.
 On va voir quelques instructions de base :
+
+\paragraph{Mise en forme du texte}
+\begin{itemize}
+  \item titre : \# (rajouter des \# par sous niveaux de paragraphes)
+	\item commencer un paragraphe : mettre 4 espaces
+	\item délimiter un paragraphe : sauter une ligne
+	\item retour à la ligne : deux espaces à la fin de phrase
+\end{itemize}
 
 \paragraph{Police d'un texte}
 \begin{itemize}
@@ -20,16 +29,6 @@ On va voir quelques instructions de base :
 	\item souligner les titres : mettre sur une ligne en dessous des = ou -
 \end{itemize}
 
-
-\paragraph{Mise en forme du texte}
-\begin{itemize}
-	\item commencer un paragraphe : mettre 4 espaces
-	\item délimiter un paragraphe : sauter une ligne
-	\item retour à la ligne : deux espaces à la fin de phrase
-	\item titre : \# (rajouter des \# par sous niveaux de paragraphes)
-\end{itemize}
-
-
 \paragraph{Ajout d'éléments au texte}
 \begin{itemize}
 	\item bloc de code : encadrer le(s) mot(s) désiré(s) par ```
@@ -38,10 +37,14 @@ On va voir quelques instructions de base :
 	\item liste ordonnée : commencer par 1. 2. 3. ...
 	\item cases a cocher : [ ] ou [x]
 	\item tableau :
-		- délimiter les colonnes par : \textbar
-		- délimiter les titres des autres lignes par : :-----:
+  \begin{itemize}
+    \item délimiter les colonnes par : \textbar
+    \item délimiter les titres des autres lignes par : :-----:
+  \end{itemize}
 	\item lien :
-		- en hypertexte : l'encadrer en \textless et \textgreater
-		- en bouton : [ \textit{nom du bouton} ](\#){.btn }
+  \begin{itemize}
+    \item en hypertexte : l'encadrer en \textless et \textgreater
+    \item en bouton : [ \textit{nom du bouton} ](\#){.btn }
+  \end{itemize}
 	\item mage : ![ \textit{texte} ]( \textit{url de l'image} )
 \end{itemize}
