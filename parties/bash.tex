@@ -1,44 +1,54 @@
 \subsubsection{Bash et scripts}
 
-Le bash est un interpréteur de script natif aux systèmes d'exploitation sous
-environnement Unix.
+\paragraph{} Le bash est un interpréteur de ligne de commande natif aux
+systèmes d'exploitation UNIX et GNU/Linux.
 
-\paragraph{A quoi ça sert ?}
+\paragraph{A quoi ça sert?}
 
-Le bash permet l'exécution de scripts, petits morceaux de code, souvent exécutés
- au démarrage, afin d'effectuer une tâche précise.
-Par exemple, l'ensemble des applications s'ouvrant au démarrage sont regroupées
- dans un script. Bash permet l'interprétation des commandes shell.
-Une commande shell est une chaîne de caractères en minuscules qui peut être
-invoquée au travers d'un invite de commande ou d'un script.
- Des options et des arguments peuvent la compléter.
+\paragraph{} Bash est le programme par défaut sous GNU/Linux qui exécute des
+commandes. Il peut être utilisé en mode interactif, comme vu à la partie sur la
+ligne de commande; mais il peut aussi être utilisé pour exécuter des scripts.
 
-Le bash propose différents traitements des commandes :
-\begin{itemize}
-  \item Les commandes simultanées : com1 \& com2 \& com3 \& ... \& comN. Les commandes com1 à comN sont exécutées simultanéments;
-  \item Les commandes successives : com1 ; com2 ; com3 ; ... ; comN. Les commandes com 1 à comN sont exécutées les unes après les autres;
-  \item etc,...\newline
-\end{itemize}
-
-Il existe deux modes de fonctionnement du bash :
-\begin{itemize}
-  \item Le mode interactif : Le terminal fonctionne avec le bash. lorsque l'on
-  tape une commande manuellement dans le terminal, on crée en réalité un mini
-  script d'une ligne, interprété par bash puis executé;
-  \item Le mode batch : bash exécute automatiquement un script contenu dans un
-  fichier texte contenant les commandes à utiliser. Ce fichier doit être
-  exécutable (réglable avec chmod).
-\end{itemize}
-
+\paragraph{} Un script est tout simplement un regroupement de lignes de
+commandes, qui vont être exécutées lignes par lignes.
 
 \paragraph{L'interprétation d'une ligne de commande}
 
-Chaque interprétation d'une ligne de commande d'un script repose sur des codes bien stricts :
+Chaque interprétation d'une ligne de commande, que ce soit en mode intéractif
+ou dans un script, repose sur ce format:
+
 \begin{itemize}
-  \item Le premier mot de la ligne est interprété comme le nom de la commande;
-  \item Chaque mot est séparé par un ou plusieurs caractères de séparation (espace, tabulation, tiret, underscore ...);
-  \item La fin de la ligne se termine par un ';', comme dans la plupart des langages de programmation, ou un retour à la ligne
+	\item Le premier mot de la ligne est interprété comme le nom de la commande
+	\item Chaque mot est séparé par un ou plusieurs caractères de séparation
+		(espace, tabulation)
+	\item Un retour à la ligne, ou un ``\texttt{;}'' si l'on veut mettre
+		plusieurs commandes sur une seule ligne
 \end{itemize}
+
+Bash propose différents traitements des commandes:
+\begin{description}
+	\item[Commandes successives:] \mintinline{bash}{com1 ; com2 ; ... ; comN.}
+		Les commandes com1 à comN sont exécutées les unes après les autres
+	\item[Commandes simultanées:] \mintinline{bash}{com1 & com2 & ...  & comN}.
+		Les commandes com1 à comN sont exécutées simultanéments
+\end{description}
+
+\paragraph{} Voici un exemple de script Bash:
+
+\begin{minted}{bash}
+#!/bin/bash
+
+echo "Enter username"
+read username
+echo "Enter password"
+read password
+
+if [[ $username == "admin" && $password == "secret" ]]; then
+	echo "valid user"
+else
+	echo "invalid user"
+fi
+\end{minted}
 
 
 Pour plus d'informations sur les lignes de commandes bash, il existe un poly sur les commandes du terminal disponible sur le GitHub du club.

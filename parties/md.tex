@@ -1,50 +1,55 @@
 \subsubsection{Histoire}
 
-Le Markdown est un \textbf{langage de balisage} crée en 2004. Il est facile à
-manipuler, donc simple à écrire et à lire sans connaître les balises.
-Le Markdown peut être écrit sur n'importe quel éditeur de texte, il suffit,
-lorsque le document est prêt a être enregistré de nommer le document avec
-l'extension : "\textbf{.md}".
-
+\paragraph{} Le Markdown est un \textbf{langage de balisage} crée en 2004. Il
+est facile à manipuler, donc simple à écrire et à lire sans connaître les
+balises. Le Markdown peut être écrit sur n'importe quel éditeur de texte, il
+suffit, lorsque le document est prêt a être enregistré de nommer le document
+avec l'extension : "\textbf{.md}".
 
 \subsubsection{Instructions}
 
-Les instructions sont \textbf{très simples et peuvent être combinées}.
-On va voir quelques instructions de base :
+\paragraph{} Les instructions sont \textbf{très simples et peuvent être
+combinées}. On va voir quelques instructions de base:
 
-\paragraph{Mise en forme du texte}
-\begin{itemize}
-  \item titre : \# (rajouter des \# par sous niveaux de paragraphes)
-	\item commencer un paragraphe : mettre 4 espaces
-	\item délimiter un paragraphe : sauter une ligne
-	\item retour à la ligne : deux espaces à la fin de phrase
-\end{itemize}
+\begin{minted}{md}
+# Titre
 
-\paragraph{Police d'un texte}
-\begin{itemize}
-	\item Italique : encadrer le(s) mot(s) désiré(s) par * ou \_
-	\item Gras :  le(s) mot(s) désiré(s) par **
-	\item Souligner : encadrer le(s) mot(s) désiré(s) par \_\_
-	\item Barré : encadrer le(s) mot(s) désiré(s) par \~{}\~{}
-	\item souligner les titres : mettre sur une ligne en dessous des = ou -
-\end{itemize}
+## Sous-titre
 
-\paragraph{Ajout d'éléments au texte}
-\begin{itemize}
-	\item bloc de code : encadrer le(s) mot(s) désiré(s) par ```
-	\item citation : commencer par \textgreater
-	\item liste : commencer par * ou - ou +
-	\item liste ordonnée : commencer par 1. 2. 3. ...
-	\item cases a cocher : [ ] ou [x]
-	\item tableau :
-  \begin{itemize}
-    \item délimiter les colonnes par : \textbar
-    \item délimiter les titres des autres lignes par : :-----:
-  \end{itemize}
-	\item lien :
-  \begin{itemize}
-    \item en hypertexte : l'encadrer en \textless et \textgreater
-    \item en bouton : [ \textit{nom du bouton} ](\#){.btn }
-  \end{itemize}
-	\item mage : ![ \textit{texte} ]( \textit{url de l'image} )
-\end{itemize}
+### Sous-sous-titre (etc.)
+
+Ceci est un paragraphe.
+ceci fait partie du même paragraphe.
+
+Ceci est un autre paragraphe.
+
+- liste
+- à
+- puces
+
+1. liste
+2. numérotée
+3. etc.
+
+Il est possible de mettre le texte *en italique*, **en gras**,
+_souligné_ ou encore ~~barré~~.
+
+```
+ceci est un extrait de code
+```
+
+```python
+# Ceci est un extrait de code en Python
+answer = 42
+print("Hello, World: " + str(answer))
+```
+
+> Ceci est une citation
+> sur plusieurs
+> lignes
+
+Les liens sont détectés automatiquement: https://ddg.gg/
+[https://www.wikipedia.org/](Lien avec titre)
+
+![https://placekitten.com/400/400](Image avec description)
+\end{minted}

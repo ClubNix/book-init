@@ -1,28 +1,28 @@
 \subsubsection{Définition}
 
-SSH signifie "Secure Shell", c'est un protocole sécurisé pour les communications
- à distance créé en 1995.\newline
+\paragraph{} SSH signifie "Secure Shell", c'est un protocole sécurisé pour les
+communications à distance créé en 1995.
 
-Pour rappel, un Shell va permettre de dialoguer avec une machine ou un serveur
-(grâce au terminal qui est une application graphique du Shell) via l'exécution
-de différentes commandes qui retourneront des informations. Il existe toutes
-sortes de Shell mais le plus utilisé reste bash.
+\paragraph{} Pour rappel, un Shell va permettre de dialoguer avec une machine
+ou un serveur (grâce au terminal qui est une application graphique) via
+l'exécution de différentes commandes qui retourneront des informations. Il
+existe toutes sortes de Shell mais le plus utilisé reste Bash.
 
+Un shell va donc nous permettre d'administrer nos serveurs Linux,
+en local, c'est-à-dire lorsque l'on se trouve physiquement en face de notre
+serveur, mais aussi à distance! Notamment grâce au Secure Shell (SSH).
 
-Un shell va donc nous permettre d'administrer nos serveurs Linux, en local,
-c'est-à-dire lorsque l'on se trouve physiquement en face de notre serveur, mais
-aussi à distance ! Notamment grâce au Secure Shell (SSH).\newline
-
-L'administration à distance est aujourd'hui vitale lorsque l'on gère un seul
-serveur, comme des milliers qui sont la plupart du temps difficiles d'accès car
-ils sont stockés dans des datacenter et isolés géographiquement.
+\paragraph{} L'administration à distance est aujourd'hui vitale lorsque l'on
+gère un seul serveur, comme des milliers qui sont la plupart du temps
+difficiles d'accès car ils sont stockés dans des datacenter et isolés
+géographiquement.
 
 Autrefois, d'autres protocoles étaient utilisés pour accéder à distance à un
 serveur Linux. Le protocole Telnet a pendant longtemps été utilisé, il permet
 également d'accéder à distance à une machine Linux, mais Telnet est aujourd'hui
-délaissé au profit de SSH et cela pour une raison très simple : son manque de
-sécurité. A l'inverse, SSH va créer un tunnel sécurisé entre l'utilisateur et la
-machine (il va crypter les données).
+délaissé au profit de SSH et cela pour une raison très simple: son manque de
+sécurité. A l'inverse, SSH va créer un tunnel sécurisé entre la machine locale
+et la machine/serveur distant (il va crypter les données).
 
 Comme dit précédemment nous utilisons SSH surtout pour faire le lien entre nos
 machines et nous.
@@ -30,16 +30,21 @@ machines et nous.
 \subsubsection{Les Commandes De Bases}
 \begin{itemize}
 	\item Toutes les commandes du terminal sont applicables
-	\item Connexion à la machine distante avec le login john 'ssh john@remotehost.example.com' ou 'ssh -l john remotehost.example.com'
-	\item Copie de la clé publique sur la machine distante
-  'ssh-copy-id -i \~/.ssh/id\_dsa.pub john@remotehost.example.com'
-	\item la commande \textbf{scp} va permettre de copier des fichiers entre le
-  serveur et le client ssh de manière sécurisée \textbf{scp my\_file
-  john@remotehost.example.com:/home/john/a\_folder}
-
-
-	pour un seul fichier et \textbf{scp -r my\_folder
-  john@remotehost.example.com:/home/john/another\_folder} pour un dossier
-	(ajout de l’argument de récursivité). Il est indispensable de préciser le
-  dossier de destination (après les ':').
+	\item Connexion à la machine distante avec le login john:\\
+		\mintinline{bash}{ssh john@remotehost.example.com}
+	\item Création d'une paire de clef publique/privée:\\
+		\mintinline{bash}{ssh-keygen -t rsa -b 4096 -C "your_email@example.com"}\\
+		Cela va permettre de se connecter aux machines distantes possédant
+		notre clef publique de manière plus sécurisée et sans mot de passe.
+	\item Copie de la clé publique sur la machine distante:\\
+		\mintinline{bash}{ssh-copy-id -i ~/.ssh/id_dsa.pub john@remotehost.example.com}
+	\item la commande \textbf{scp} va permettre de copier des fichiers entre la machine locale et le
+		serveur en utilisant le protocole SSH:\\
+		\mintinline{bash}{scp my_file john@remotehost.example.com:/home/john/a_folder}\\
+		pour un seul fichier et:\\
+		\mintinline{bash}{scp -r my_folder john@remotehost.example.com:/home/john/another_folder} pour un dossier
+		(ajout de l’argument de récursivité). Il est indispensable de préciser le
+		dossier de destination (après les ':'). Avec cette commande il est
+		possible de copier dans les deux sens: de notre machine au serveur, ou
+		du serveur à notre machine, selon l'ordre des arguments de la commande.
 \end{itemize}

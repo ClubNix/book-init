@@ -1,99 +1,103 @@
 \subsubsection{Histoire et Principe}
 
-\LaTeX  a été créé en 1983, c'est un \textbf{langage et un système de composition de documents}.
-Il sert principalement à de la mise en page simple de documents et a pour but de
- séparer le fond et la forme.
+\paragraph{} \LaTeX{} a été créé en 1983, c'est un \textbf{langage et un
+système de composition de documents}. Il sert principalement à de la mise en
+page de documents et a pour but de séparer le fond et la forme.
 
-\LaTeX  est devenu le langage privilégié pour les documents scientifiques du fait
- de sa simplicité.\newline
+\LaTeX{} est devenu le langage privilégié pour les documents scientifiques et
+de beaucoup de livres.
 
-Pour rédiger du \LaTeX , il faut uniquement se concentrer sur la structure
-logique du document et son contenu car le logiciel s'occupe de la mise en page
-automatiquement.
-Vous pouvez écrire en \LaTeX  grâce à différents logiciels d’éditeurs de texte
-dédiés comme TexMaker, Texlive, TeXworks, TexMacs, ...
-Dans ces éditeurs, il est possible de voir directement la mise en page en format
-PDF lorsqu'il est compilé.
-Mais il est également possible de manipuler \LaTeX  simplement à partir d'un
-terminal ou de gedit par exemple.\newline
+\paragraph{} Pour rédiger du \LaTeX, il faut uniquement se concentrer sur la
+structure logique du document et son contenu car le logiciel s'occupe de la
+mise en page automatiquement. Vous pouvez écrire en \LaTeX{} grâce à différents
+logiciels d’éditeurs de texte dédiés comme TexMaker, Texlive, TeXworks,
+TexMacs\ldots Dans ces éditeurs, il est possible de voir directement la mise en
+page en format PDF lorsqu'il est compilé. Mais il est également possible de
+manipuler \LaTeX{} simplement à partir d'un terminal ou d'un éditeur de texte.
 
-L'évolution de \LaTeX  est assurée par la communauté d'utilisateurs qui regroupe
-des étudiants et des professeurs de mathématiques ou de physique, comme des
-musiciens et ingénieurs en informatique notamment.
-
+L'évolution de \LaTeX{} est assurée par la communauté d'utilisateurs qui
+regroupe des étudiants et des professeurs de mathématiques ou de physique,
+comme des musiciens et ingénieurs en informatique notamment.
 
 \subsubsection{Différences avec Word}
 
-Il faut d'abord savoir que les deux logiciels ne se comportent et ne s'utilisent pas de la même façon.
+\paragraph{} Il faut d'abord savoir que les deux logiciels ne se comportent et
+ne s'utilisent pas de la même façon.
 
 \begin{itemize}
-\item La mise en page (images, figures, légendes, formules mathématiques, dessins, tableaux, ...) sur Word est une rude manipulation
- qui fait perdre du temps. \LaTeX  le fait tout seul, mais son interface austère fait "peur" aux débutants.
-  Pourtant il suffit de lui dire quel type de documents on souhaite obtenir pour obtenir quelque chose de lisible
-  et adapté avec les normes éditoriales ;
-\item \LaTeX  est gratuit (et même libre), contrairement à Word ;
-\item Les formules mathématiques sont simples d'écriture sur \LaTeX  ;
-\item Tout est modifiable et paramétrable avec \LaTeX  à n'importe quel moment
-(\textit{si au bout de la 100 ème page vous vous rendez compte que vous voulez
-changer de police, uniquement sur tous les titres par exemple}) ;
-\item La gestion de documents longs est intuitive sur \LaTeX , contrairement à
-la complexité sur Word lorsqu'il faut gérer
-la mise en page identique ;
-\item \LaTeX  peut générer automatiquement des bibliothèques ou tables de matières beaucoup plus facilement que sur Word ;
-\item Accéder à la création des PDF rapidement sur \LaTeX  ;
+	\item La mise en page (images, figures, légendes, formules mathématiques,
+		dessins, tableaux, ...) sur Word est une rude manipulation qui fait
+		perdre du temps. \LaTeX{} le fait tout seul, mais son interface austère
+		fait "peur" aux débutants. Pourtant il suffit de lui dire quel type de
+		documents on souhaite obtenir pour obtenir quelque chose de lisible et
+		adapté avec les normes éditoriales
+	\item \LaTeX{} est gratuit (et même libre), contrairement à Word
+	\item Les formules mathématiques sont simples d'écriture sur \LaTeX
+	\item Tout est modifiable et paramétrable avec \LaTeX{} à n'importe quel
+		moment (par exemple si au bout de la 100\ieme{} page vous vous rendez
+		compte que vous voulez changer de police, uniquement sur tous les
+		titres)
+	\item La gestion de documents longs est intuitive sur \LaTeX ,
+		contrairement à la complexité sur Word lorsqu'il faut gérer la mise en
+		page identique
+	\item \LaTeX{} peut générer automatiquement des bibliographies, tables de
+		matières ou glossaires beaucoup plus facilement que sur Word
+	\item Accéder à la création des PDF rapidement sur \LaTeX
 \end{itemize}
-
 
 \subsubsection{Utilisation}
 
-Le système de balisage est assez semblable au langage HTML. Il est donc possible
-de \textbf{créer ou modifier des macro-commandes} afin d'ajouter des raccourcis.
-\textit{Par exemple pour regrouper plusieurs instructions en une seule.}
-Comme ce langage a été créé avant le Unicode, tous les caractères peuvent
-s'écrire en ASCII (mais ce n'est plus nécessaire).
+\paragraph{} Il est possible de \textbf{créer ou modifier des macro-commandes}
+afin d'ajouter des raccourcis, par exemple pour regrouper plusieurs
+instructions en une seule. Comme ce langage a été créé avant le Unicode, tous
+les caractères peuvent s'écrire en ASCII (mais ce n'est plus nécessaire).
 
-Il faut tout d'abord configuration les packages à utiliser pour déterminer la
+Il faut tout d'abord inclure les ``packages'' à utiliser pour déterminer la
 langue d’écriture, les marges, polices d’écriture, couleur et taille de
-l’écriture, style du document, etc ...
-Tous ces packages \textbf{peuvent être trouvés documentés sur Internet}, vous
-pouvez donc simplement les importer.\newline
+l’écriture, style du document, etc. Tous ces packages \textbf{peuvent être
+trouvés documentés sur Internet}, vous pouvez donc simplement les importer.
 
-Voici les principales instructions qui vous serviront :
+Voici les principales instructions qui vous serviront:
 
+\begin{description}
+	\item[Partie:] \mintinline{latex}{\part{nom de la partie}}
+	\item[Section:] \mintinline{latex}{\section{nom de la section}}
+	\item[Sous-section:] \mintinline{latex}{\subsection{nom de la sous-section}}
+	\item[Paragraphe:] \mintinline{latex}{\paragraph{Nom optionel} contenu du paragraphe}
+	\item[Paragraphe:] \mintinline{latex}{\newline ou \\}
+	\item[Liste:] ~\\\begin{minted}{latex}
+% Liste à point
 \begin{itemize}
-\item Partie : $ \setminus part\lbrace \textit{nom\_ de\_ la\_ partie} \rbrace $
-
-\item Section : $ \setminus section\lbrace \textit{nom\_ de\_ la\_ partie}\rbrace $
-
-\item Sous-section : $ \setminus subsection\lbrace \textit{nom\_ de\_ la\_ partie} \rbrace $
-
-\item Paragraphe : $ \setminus paragraph\lbrace \textit{nom\_ de\_ la\_ partie}\rbrace $
-
-\item Saut de ligne : $ \setminus newline ou \setminus \setminus $
-
-\item Liste : $ commencer par \setminus begin \lbrace itemize \rbrace puis pour chaque tiret \setminus item et conclure
-par \setminus end\lbrace itemize \rbrace $ \textit{ NB : pour modifier les puces il suffit de mettre la puces souhaitées
-entre $ [  ] $ apres $ \setminus item $}
-\newline pour des listes numérotées il faut écrire $\setminus begin\lbrace enumerate\rbrace $
-
-\item très très petite écriture : $ \setminus scriptsize $
-
-\item très petite écriture : $ \setminus footnotesize $
-
-\item petite écriture : $ \setminus small $
-
-\item grande écriture : $ \setminus large$
-
-\item très grande écriture : $ \setminus LARGE $
-
-\item très très grande écriture : $ \setminus huge $
-
-\item Gras :  $ \setminus textbf\lbrace\rbrace $
-\item Italique :  $ \setminus textit\lbrace\rbrace $
-\item Penché :  $ \setminus textsl\lbrace\rbrace $
-\item Machine à écrire :  $ \setminus texttt\lbrace\rbrace $
-\item Exposant :  $ \setminus textsuperscript\lbrace\rbrace $
-\item Encadré :  $ \setminus fbox\lbrace\rbrace $
-\item Souligné :  $ \setminus ul\lbrace\rbrace $
-\item Barré :  $ \setminus st\lbrace\rbrace $
+	\item Contenu
+	\item de la
+	\item liste
 \end{itemize}
+
+% Liste numérotée
+\begin{enumerate}
+	\item Contenu
+	\item de la liste
+	\item
+		\begin{enumerate}
+			\item Sous
+			\item liste
+		\end{enumerate}
+\end{enumerate}
+
+% Liste de descriptions
+\begin{description}
+	\item[Mot:] description
+	\item[Autre mot:] autre description
+\end{description}
+		\end{minted}
+	\item[Mise en avant:] \mintinline{latex}{\emph{mon texte}}
+	\item[Gras:] \mintinline{latex}{\textbf{mon texte}}
+	\item[Italique:] \mintinline{latex}{\textit{mon texte}}
+	\item[Machine à écrire:] \mintinline{latex}{\texttt{mon texte}}
+	\item[Exposant:] \mintinline{latex}{\textsuperscript{mon texte}}
+\end{description}
+
+\paragraph{} Pour une excellente ressource sur le \LaTeX{} et un format plus
+``tutoriel'':
+
+\url{https://en.wikibooks.org/wiki/LaTeX}.

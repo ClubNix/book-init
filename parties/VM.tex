@@ -1,9 +1,10 @@
 \subsubsection{Définitions}
 
-\paragraph{La Virtualisation}
- Au sens large, la virtualisation consiste à simuler l'existence de plusieurs machines informatiques en utilisant une seule.
- Ceci permet en particulier de diminuer les coûts d'achat de matériel informatique et de rentabiliser leur utilisation.
-Exemples de logiciels de virtualisation: VMware, VirtualBox...
+\paragraph{La Virtualisation} Au sens large, la virtualisation consiste à
+simuler l'existence de machines informatiques dans une machine informatique.
+Ceci permet en particulier de diminuer les coûts d'achat de matériel
+informatique et de rentabiliser leur utilisation. Exemples de logiciels de
+virtualisation: KVM, Xen, VMware, VirtualBox\ldots
 
 \paragraph{Un Hyperviseur}
 \begin{itemize}
@@ -12,33 +13,23 @@ Exemples de logiciels de virtualisation: VMware, VirtualBox...
 	\item S'assure que ces VM n'interfèrent pas l'une avec l'autre
 \end{itemize}
 
-Il existe deux types d'hyperviseurs: le type 1 et le type 2
+\paragraph{Une machine virtuelle}
 
-\paragraph{Définition d'une machine virtuelle}
+\paragraph{} Une machine virtuelle est généralement enregistré sous la forme
+d'un fichier, généralement appelé image, qui se comporte comme un ordinateur
+réel.
 
-Une machine virtuelle est un fichier informatique, généralement appelé image, qui se comporte comme un ordinateur réel.\newline
+\paragraph{} Cette image contient les informations des partitions de la machine
+et le contenu des partitions.
 
-En d’autres termes, il s’agit d’un ordinateur créé à l’intérieur d’un ordinateur. Elle s’exécute dans une fenêtre,
- comme tout autre programme, en offrant à l’utilisateur final une expérience identique à celle qu’il aurait sur le
- système d’exploitation hôte.
+\paragraph{} Lorsque la machine virtuelle est lancée, elle est placée dans un
+``bac à sable'' qui l’isole du reste du système, de sorte que les programmes de
+la machine virtuelle ne peuvent ni s’échapper, ni modifier l'ordinateur hôte.
+Cela produit un environnement idéal pour tester d'autres systèmes
+d’exploitation, dont des versions bêta, l’accès à des données infectées par des
+virus.
 
- La machine virtuelle est placée dans un « bac à sable » qui l’isole du reste du système,
- de sorte que les logiciels installés sur la machine virtuelle ne peuvent ni s’échapper, ni modifier l’ordinateur hôte.
- Cela produit un environnement idéal pour tester d’autres systèmes d’exploitation, dont des versions bêta,
- l’accès à des données infectées par des virus, la création de sauvegardes de système d’exploitation et l’exécution
- de logiciels ou d’applications sur des systèmes d’exploitation auxquels ils ne sont pas destinés à l’origine.
-Il est possible d’exécuter plusieurs machines virtuelles simultanément sur un même ordinateur physique.
-Pour les serveurs, les divers systèmes d’exploitation fonctionnent côte à côte, avec un composant logiciel appelé hyperviseur
-(logicielle de virtualisation) pour les gérer, alors que les ordinateurs de bureau classiques n’utilisent qu’un seul
-système d’exploitation pour exécuter d’autres systèmes d’exploitation dans des fenêtres de programme qui leur sont propres.
-
-
- Chaque machine virtuelle demande son propre matériel virtuel, à savoir les processeurs, la mémoire, les disques durs,
-  les interfaces réseau et les autres périphériques nécessaires. Le matériel virtuel est ensuite mappé au matériel réel
-   sur la machine physique, ce qui permet de réaliser des économies en réduisant le besoin de disposer de systèmes matériels physiques,
-    ainsi que les coûts de maintenance associés, tout en réduisant la demande en alimentation et refroidissement.
-
-
-VirtualBox est une application de virtualisation x86 qui facilite la création de machines virtuelles mais pas très conseillé
-d’utilisation, il est préférable d'utiliser Docker(lxd) qui est très léger et permet d'éviter une surcharge
-Sinon nous avons KVM qui lui est un peu plus lourd mais va plutôt se rapprocher de virtual Box.
+\paragraph{} Cependant, leur principale utilisation en entreprise est pour des
+raisons de sécurité: plusieurs services sont hébergés sur plusieurs machine
+virtuelles. Ainsi s'il s'avère qu'un système est vulnérable, un attaquant aura
+beaucoup de mal à sortir du système de virtualisation.

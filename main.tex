@@ -3,8 +3,9 @@
 
 %% Language and font encodings
 \usepackage[french]{babel}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{microtype}
 
 %% Sets page size and margins
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
@@ -25,9 +26,12 @@
 \DeclareFontShape{T1}{lmr}{b}{sc}{<->ssub*cmr/bx/sc}{}
 \DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub*cmr/bx/sc}{}
 \usepackage{url}
-\usepackage[usenames, dvipsnames]{color} % couleurs (nombre de base étendu)
-\usepackage{listings}% insérer code source
-\lstloadlanguages{sh,bash,awk,make}
+\usepackage[usenames, dvipsnames]{xcolor} % couleurs (nombre de base étendu)
+
+\usepackage{minted}% insérer code source
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\setminted{linenos,bgcolor=bg,tabsize=4,breaklines}
+
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -35,23 +39,6 @@
 \usepackage{multicol}
 \definecolor{grey}{rgb}{0.96,0.96,0.96}
 \definecolor{grey2}{rgb}{0.3,0.3,0.3}
-
-%% Define listings params %%
-\lstset{%
-%	numbers=left,
-	language=bash,
-	tabsize=4,
-	frame=single, % cadre autour du code
-	breaklines=true, % autorise couper ligne trop longue
-	basicstyle=\small\ttfamily,
-	numberstyle=\scriptsize\ttfamily,
-	backgroundcolor=\color{grey},
-	showstringspaces=false,
-	keywordstyle=\color{OliveGreen},
-	stringstyle=\color{BrickRed},
-	commentstyle=\color{grey2}\it,
-	stepnumber=1 % numérote toute les x lignes
-}
 
 \begin{document}
 
@@ -98,7 +85,7 @@
 
 \newpage
 \section{Infrastructure réseau}
-  \subsection{LDAP}
+  \subsection{LDAP}\label{subsec:ldap}
     \input{parties/ldap.tex}
   \subsection{NFS}
     \input{parties/nfs.tex}

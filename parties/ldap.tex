@@ -1,55 +1,54 @@
 \subsubsection{Le LDAP, ou \textit{Lightweigth Directory Acess Protocol}}
 
-Lorsqu'un utilisateur tente de se connecter à un ordinateur, le LDAP reçoit une combinaison login/mot de passe et donne
-ensuite ou non l'autorisation de se connecter.
-
-
 \subsubsection{Introduction}
 
-Le LDAP est un protocole créé en 1995, succédant au protocole DAP et permettant l'accès et la modification de base de données
- sur les utilisateurs d'un reseau. Un LDAP sert notement à se connecter ou se déconnecter d'un serveur hébergant le LDAP afin
-  d'y être identifié, mais aussi à chercher des informations, les comparer, ajouter des utilisateurs...
-\subsection{Le LDAP du club Nix ou de l'école}
-Le LDAP du Club*Nix ou de l'école permet de se connecter et de s'identifier afin de récupérer ses informations, quelle que soit
- la machine utilisée.
+Le LDAP est un protocole créé en 1995, succédant au protocole DAP et est une
+base de données sous forme d'arbre. Les serveurs LDAP sont principalement
+utilisés dans les grandes entreprises ou écoles/universités pour enregistrer
+les informations sur les employés/élèves, et vérifier leurs identifiants sur
+différents services.
 
+\paragraph{} Par exemple, une entreprise peut connecter leurs ordinateurs
+GNU/Linux, Windows, etc. et leurs services web à un serveur LDAP pour que les
+employés n'aient qu'un seul identifiant et un seul mot de passe sur tous ces
+services.
+
+\subsection{Le LDAP du club Nix ou de l'école}
+
+Le Club*Nix et l'école possèdent chacun un serveur LDAP contenant les
+informations des comptes des membres/élèves, leur permettant entre autres de se
+connecter aux ordinateurs avec le même mot de passe.
 
 \subsubsection{Les entrées}
 
-Un LDAP définit l'accès aux entrées (ou utilisateurs la plupart du temps).
-Le LDAP ne peut gérer que des entrées. Une entrée peut être un nom d'utilisateur, un périphérique ou encore des paramètres.
- Il existe 2 types d'entrées, les entrées normales et les entrées opérationnelles :
-\begin{itemize}
-    \item Les entrées classiques, telles que le nom d'utilisateur ou la date d'anniversaire sont des entrées dites classiques.
-    \item Les entrées opérationnelles, tels que les paramètres, les dates de modification, qui ne sont accessibles et utilisables
-    uniquement par le serveur.
-\end{itemize}
-Une entrée est définie par son nom, ou DN pour \textit{Distinguished Name}, composé d'une série de clés et de valeurs de ces clés.
-Par exemple, la clé \textit{uid} définit le nom d'utilisateur et la clé \textit{cn} définit le nom. Pour ces deux clés,
- une entrée serait sous la forme : \textit{uid=utilisateur,cn=nix}
+\paragraph{} Une base de donnée de type LDAP contient des entrées (utilisateurs la plupart
+du temps), qui sont des collections d'attributs. Un attribut peut être un nom
+d'utilisateur, un périphérique ou autres.
 
+\paragraph{} Comme le LDAP est sous forme arborescente (comme un système de
+fichier), chaque entrée peut être accédée via son ``chemin'', ici appelé DN
+pour \textit{Distinguished Name}. Contrairement à un
+système de fichier, le chemin se lit de droite à gauche (au lieu de gauche à
+droite), et chaque ``dossier'' est sous la forme ``\texttt{clé=valeur}''.
 
-\subsubsection{L'arborescence}
+\paragraph{} Ainsi un exemple de DN d'une entrée serait:
+\texttt{uid=john,ou=Membres,dc=clubnix,dc=org}
 
-Un serveur hébergeant un LDAP est organisé selon une arborescence, comme un système de fichiers, dans lequel chaque branche
-correspond à une entrée. Une branche située à la racine sera appelée racine ou root en anglais.
-Le schéma d'une clé correspond à l'ensemble des valeurs des attributs ou valeurs attribuées aux clés.
-Les annuaires LDAP répondent à certaines règles de structure :
-\begin{itemize}
-    \item Un annuaire est un arbre d'entrées;
-    \item Une entrée est constituée d'un ensemble d'attributs;
-    \item Un attribut possède un nom, un type et une ou plusieurs valeurs;
-    \item Les attributs sont définis dans des schémas.
-\end{itemize}
-
+\paragraph{} Dans cet exemple, en faisant le parallèle avec un système de
+fichier, ici la racine est ``\texttt{dc=clubnix,dc=org}'' (un peu comme le
+\texttt{C:} dans un système de fichier Windows), ensuite dans le ``dossier''
+``\texttt{ou=Membres}'', enfin dans le ``fichier'' (ou ici l'entrée)
+``uid=john''.
 
 \subsubsection{Chercher des informations d'un LDAP}
 
-Le protocole LDAP fournit un ensemble de fonctions permettant d'interroger le
-serveur sur lequel est hébergé le serveur LDAP afin de modifier, ajouter ou
-supprimer des entrées. On peut citer notamment *add* pour ajouter une entrée,
- *delete* pour la supprimer, ou *rename* pour la renommer, afin de modifier
- l'arborescence du LDAP.
+\paragraph{} Le protocole LDAP fournit un ensemble de fonctions permettant
+d'interroger le serveur sur lequel est hébergé le serveur LDAP afin de
+modifier, ajouter ou supprimer des entrées. On peut citer notamment *add* pour
+ajouter une entrée, *delete* pour la supprimer, ou *rename* pour la renommer,
+afin de modifier l'arborescence du LDAP.
 
-On utilise essentiellement les LDAP grâce à des interfaces graphiques ou à
-d'autres logiciels qui utilisent un LDAP.
+\paragraph{} On utilise essentiellement les LDAP grâce à des interfaces
+graphiques ou à d'autres logiciels qui utilisent un LDAP, mais des outils en
+ligne de commande, tels que \texttt{ldapadd} ou \texttt{ldapsearch} peuvent
+aussi être utilisés.

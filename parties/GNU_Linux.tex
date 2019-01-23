@@ -1,80 +1,89 @@
 \subsubsection{UNIX}
 
-\textbf{Unix} est un \textbf{systeme d'exploitation} multi-tâches et multi-
-utilisateurs créé en \textbf{1969}.
-Il repose sur un interprétateur (le shell) et sur plusieurs petits utilisateurs
-(avec des actions spécifiques selon son groupe).
+\paragraph{} \textbf{UNIX} est un \textbf{systeme d'exploitation} multi-tâches
+et multi- utilisateurs créé en \textbf{1969}. Il est composé de plusieurs
+composants:
 
-C'est une \textbf{marque deposée de l'OpenGroup}.
-Son nom est un dérivé de "Unics" (\textit{Uniplexed Information and Computing
-Service}). C'est un jeu de mot avec "Multics"
-(un autre noyau) qui vise à offrir simultanément plusieurs services à un
-ensemble d'utilisateurs.
+\begin{description}
+	\item[Le noyau:] aussi appelé ``kernel'' en anglais. C'est un logiciel
+		central au système d'exploitation; il fait le lien entre le matériel et
+		les logiciels plus normaux.
+	\item[Un environnement de développement:] ou tout simplement des outils qui
+		permettent de créer de nouveaux logiciels/outils.
+	\item[Des commandes] qui permettent d'exécuter des actions qu'on attend
+		d'un système d'exploitation, comme manipuler les fichiers, aller sur
+		internet, etc.
+	\item[De la documentation] qui explique le fonctionnement du système et des
+		outils fournis.
+\end{description}
 
-Unix a donné naissance à une \textbf{famille de systèmes} comme BSD, GNU/LINUX,
-iOS ou encore MacOS, eux-même divisés en variantes de systèmes d'exploitation
-aux \textbf{normes POSIX}. Cette norme technique standardise les interfaces de
-programmation des logiciels.\newline
+\paragraph{} C'est une \textbf{marque deposée de l'OpenGroup}. Son nom est un
+dérivé de "Unics" (\textit{Uniplexed Information and Computing Service}). C'est
+un jeu de mot avec "Multics" (un autre système) qui vise à offrir simultanément
+plusieurs services à un ensemble d'utilisateurs.
 
-Il faut savoir que la quasi-totalité des systèmes PC ou mobiles (à l'exception
-des systèmes Windows) sont basés sur le noyau de UNIX (y compris ceux de la
-marque Apple).
-Comme dit précédemment, Unix est un noyau, \textbf{il doit donc être utilisé
-avec d'autres logiciels} car il lui faut un système d'exploitation.
+UNIX a donné naissance à une \textbf{famille de systèmes} comme BSD, GNU/Linux,
+iOS ou encore MacOS, eux-mêmes divisés en variantes de systèmes d'exploitation
+aux \textbf{normes POSIX}. Cette norme technique standardise des outils ou des
+fonctionnements que l'on devrait retrouver dans un système d'exploitation.
 
-\subsubsection{GNU : "GNU's Not UNIX"}
+\paragraph{} Il faut savoir que la quasi-totalité des systèmes PC ou mobiles (à
+l'exception des systèmes Windows) sont sur des systèmes basés sur la norme POSIX (y compris
+ceux de la marque Apple). D'une certaine manière, on peut dire qu'ils sont
+descendants ou directement reliés à UNIX.
 
-GNU est un \textbf{projet des années 1990} lancé par Richard STALLMAN. C'est un
-\textbf{système d'exploitation libre} compatible avec le noyau UNIX. Il utilise
-des logiciels libres issus d'autres projets tels que le noyaux Linux (\textit{
-voir GNU/LINUX}).
+\subsubsection{GNU: "GNU's Not UNIX"}\label{subsubsec:gnu}
+
+\paragraph{} GNU est un \textbf{projet des années 1990} lancé par Richard
+Stallman. C'est un \textbf{système d'exploitation libre}, bien qu'incomplet,
+compatible avec la norme POSIX. GNU est incomplet car il lui manque un noyau
+viable; il est donc très souvent utilisé avec le noyau Linux, développé par
+Linus Torvalds, ce qui a donné le projet GNU/Linux (c.f. section
+\ref{subsubsec:gnulinux}).
+
 Sa \textbf{philosophie} est de maintenir intacts les \textbf{tradictions hackers
 de partage} dans un monde de plus en plus marqué par l'empreinte du droit
 d'auteur. Il se bat donc pour une \textbf{libre diffusion des connaissances}.
-"GNU vise à ne laisser l'homme devenir ni l'esclave de la machine ni de ceux qui auraient l'exclusivité de sa programmation".\newline
+"GNU vise à ne laisser l'homme devenir ni l'esclave de la machine ni de ceux
+qui auraient l'exclusivité de sa programmation".
 
-Il est \textbf{utilisable et partageable librement par tous}, ainsi chacun
-complète petit a petit l'architecture initiale de GNU pour le rendre meilleur.
-C'est dans ce contexte que le projet invite la communauté de hackers à le
-rejoindre et à participer à son développement.
-Il faut savoir qu'il est composé :
+\paragraph{} Il est \textbf{utilisable et partageable librement par tous},
+ainsi chacun complète petit a petit l'architecture initiale de GNU pour le
+rendre meilleur. C'est dans ce contexte que le projet invite la communauté de
+hackers à le rejoindre et à participer à son développement. Il faut savoir
+qu'il est composé :
+
 \begin{itemize}
 	\item d'un éditeur de texte (emacs),
 	\item d'un compilateur très performant (gcc),
 	\item d'un débogueur (gdb),
 	\item d'un langage de script (bash),
 	\item de bibliothèques de systèmes (glibc),
-	\item (plus tard d'un noyau ramené par le projet Linux).
 \end{itemize}
-Malgré tous ces composants, GNU est toujours \textbf{incomplet} : son noyau est immature et incompatible avec certains de ses composants. \newline
 
+\subsubsection{GNU/Linux}\label{subsubsec:gnulinux}
 
-\subsubsection{GNU/LINUX}
+\paragraph{} GNU/Linux a été créé en \textbf{1991}. Il est \textbf{initié par
+le projet Debian} et la naissance du noyau Linux. Il crédite donc à la fois
+Linux et GNU \textit{mais l'usage de Linux est plus connu au grand public}.
 
-GNU/LINUX a été créé en \textbf{1991}. Il est \textbf{initié par le projet
-Debian} et la naissance du noyau Linux.
-Il crédite donc à la fois Linux et GNU \textit{mais l'usage de Linux est plus
-connu au grand public}.
+Il est alors toujours basé sur le \textbf{mouvement du logiciel libre et du
+mode opératoire du hacker}. Cette association a eu lieu pour combler le vide
+causé par le développement inachevé de GNU (c.f. section \ref{subsubsec:gnu}).
 
-Il est alors toujours basé sur le \textbf{mouvement du logiciel libre et du mode
-opératoire du hacker}.
-Cette association a eu lieu pour combler le vide causé par le développement
-inachevé de GNU (\textit{voir GNU}).\newline
-
-Il est utilisé sur la plupart des téléphones portables comme sur les
-super-ordinateurs. Ce projet eut un grand impact dans le monde des serveurs
-informatiques.
-GNU/LINUX veut casser le fait qu'à l'origine il fallait des connaissances
-solides en informatique pour utiliser un système d'exploitation (\textit{pas
-d'interface graphique et besoin d'installer toutes les applications soi-même}).
+\paragraph{} Il est utilisé sur la plupart des téléphones portables (par
+exemple Android) comme sur les super-ordinateurs. Ce projet eut un grand impact
+dans le monde des serveurs informatiques. GNU/Linux veut casser le fait qu'à
+l'origine il fallait des connaissances solides en informatique pour utiliser un
+système d'exploitation (\textit{pas d'interface graphique et besoin d'installer
+toutes les applications soi-même}).
 
 Il a donc été un important vecteur de \textbf{popularisation du mouvement de
-l'open source}.
-Il a eu des \textbf{centaines de milliers de redistributions} avec des versions
-différentes pour plaire à tous les goûts (en fonction des besoins,
-configurations, sécurité, ...\textit{voir différents OS}).
-GNU/LINUX a remplacé d'autres systèmes de type Unix et/ou évite l'achat d'une
-licence Windows (qui est très chère à l'achat).\newline
+l'open source}. Il a eu des \textbf{centaines de milliers de redistributions}
+avec des versions différentes pour plaire à tous les goûts (en fonction des
+besoins, configurations, sécurité, ...\textit{voir différents OS}). GNU/Linux a
+remplacé d'autres systèmes de type UNIX et/ou évite l'achat d'une licence
+Windows (qui est très chère à l'achat).
 
-Aujourd'hui on peut retrouver tous les équivalents des logiciels/applications
-qu'il y a sous Windows mais en Open Source.\newline
+\paragraph{} Aujourd'hui on peut retrouver tous les équivalents des
+logiciels/applications qu'il y a sous Windows mais en Open Source.

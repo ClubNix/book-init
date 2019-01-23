@@ -1,30 +1,21 @@
 \subsubsection{Définition}
 
-Dans le domaine informatique, le terme log désigne un type de fichier, ou une entité équivalente, dont la mission principale consiste
-à stocker un historique des événements. Diminutif de logging, le terme peut être traduit en français par "journal".
-Le log s'apparente ainsi à un journal de bord horodaté, qui ordonne les différents événements qui se sont produits sur un ordinateur,
- un serveur, etc. Il permet ainsi d'analyser heure par heure, voire minute par minute, l'activité interne d'un processus.
+\paragraph{} Dans le domaine informatique, le terme ``log'' désigne un type de
+fichier, ou une entité équivalente, dont la mission principale consiste à
+stocker un historique des événements. Diminutif de \textit{logging}, le terme
+peut être traduit en français par "journal". Le log s'apparente ainsi à un
+journal de bord horodaté, qui ordonne les différents événements qui se sont
+produits sur un ordinateur, un serveur, etc.
 
+\paragraph{} Ils s'avèrent utiles pour comprendre la provenance d'une erreur en
+cas de bug. Ils permettent également d'établir des statistiques, comme le
+nombre de connexions à un site Web ou à un serveur, le nombre d'échec
+d'authentification, etc.
 
-Chaque action d'un système informatique (ouverture d'une session, installation d'un programme, navigation sur Internet...) produit
-un fichier log. Diminutif de logging, le terme peut être traduit en français par "journal" . Ces fichiers textes listent
-chronologiquement les événements exécutés. Ils s'avèrent utiles pour comprendre la provenance d'une erreur en cas de bug.
-Ils permettent également d'établir des statistiques de connexions à un site Web ou à un serveur.
+\paragraph{} S'il s'agit d'un serveur Web, un fichier log va par exemple
+enregistrer la date et l'heure de la tentative d'accès, l'adresse IP du client,
+le fichier cible, le système d'exploitation utilisé, le navigateur, la réponse
+du serveur à cette requête, éventuellement le type d'erreur rencontré...
 
-
-S'agissant d'un serveur Web, un fichier log va par exemple enregistrer la date et l'heure de la tentative d'accès, l'adresse IP du client,
-le fichier cible, le système d'exploitation utilisé, le navigateur, la réponse du serveur à cette requête, éventuellement le type
- d'erreur rencontré...\newline
-
-Les fichiers logs peuvent contenir des informations confidentielles
-
-\begin{itemize}
-	\item L’heure et date de consultation
-	\item Le nombre de consultations
-	\item La durée de la session
-	\item L’adresse IP et le nom d‘hôte de l’utilisateur
-	\item Les informations sur le client demandeur (en général le navigateur)
-	\item Le moteur de recherche utilisé, dont les requêtes
-	\item Le système d’exploitation utilisé
-	\item Une entrée classique d’un fichier log d’un serveur Web se présente comme ci-dessous: \textit{183.121.143.32 - - $ [ $18/Mar/2003:08:04:22 +0200 $ ] $ "GET /images/logo.jpg HTTP/1.1" 200 512 "http://www.wikipedia.org/" "Mozilla/5.0 (X11; U; Linux i686; de-DE;rv:1.7.5)"}
-\end{itemize}
+\paragraph{} Les fichiers de log peuvent contenir des informations
+confidentielles
