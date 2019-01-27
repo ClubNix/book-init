@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/latex
 # Edit at https://www.gitignore.io/?templates=latex
 
@@ -269,3 +268,5 @@ TSWLatexianTemp*
 
 # End of https://www.gitignore.io/api/latex
 
+# For the Atom editor
+*.tags
